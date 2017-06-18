@@ -1,0 +1,62 @@
+[
+    {
+        "city": "м. Дніпро",
+        "deps": [
+            {
+                "id": 1,
+                "name": "вул. Кожем’яки, 17",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=23&sID_Public_SubjectOrganJoin=1376"
+            },
+            {
+                "id": 2,
+                "name": "вул. Троїцька площа (вул. Красна площа), 2а",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=18&sID_Public_SubjectOrganJoin=1375"
+            },
+            {
+                "id": 3,
+                "name": "вул. Курінна (вул. Аверіна), 57, каб. № 8",
+                "url": "https://igov.org.ua/api/service/flow/DMS/getSlots?nID_Server=0&nID_Service_Private=611"
+            },
+            {
+                "id": 4,
+                "name": "вул. Поля, 1, (2-й поверх, віконце 1, 2 чи 3)",
+                "url": "https://igov.org.ua/api/service/flow/DMS/getSlots?nID_Server=0&nID_Service_Private=609"
+            },
+            {
+                "id": 5,
+                "name": "вул. Космонавтів, 4",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=28&sID_Public_SubjectOrganJoin=1383"
+            },   
+            {
+                "id": 6,
+                "name": "вул. Шевченко, 7 (1 апарат)",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=14&sID_Public_SubjectOrganJoin=1378"
+            },
+            {
+                "id": 7,
+                "name": "вул. Шевченко, 7 (2 апарат)",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=305&sID_Public_SubjectOrganJoin=3138"
+            },    
+            {
+                "id": 8,
+                "name": "вул. Князя Володимира Великого (вул. Плеханова), 34",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=25&sID_Public_SubjectOrganJoin=1380"
+            },
+            {
+                "id": 9,
+                "name": "вул. Робоча, 22а",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=26&sID_Public_SubjectOrganJoin=1381"
+            },
+            {
+                "id": 10,
+                "name": "пр. П.Орлика (пр. Ілліча), 3, кабінет №5",
+                "url": "https://igov.org.ua/api/service/flow/DMS/getSlots?nID_Server=0&nID_Service_Private=613"
+            },
+            {
+                "id": 11,
+                "name": "вул. Янтарна, 75а",
+                "url": "https://igov.org.ua/api/service/flow/63?nID_Server=0&nID_Service=176&nID_SubjectOrganDepartment=24&sID_Public_SubjectOrganJoin=1379"
+            }            
+        ]
+    }
+]

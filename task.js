@@ -12,17 +12,17 @@ module.exports = function() {
     winston.info('fetch data');
     request.get(url, function (error, response, body) {
         if (!error) {
-            console.log(JSON.stringify(body));
+            console.log(body);
             let json = JSON.parse(body);
             if (json.aDay.length > 0) {
                 if (vacantNotify) {
-                    bot.notifyAll('vacant time').then(() => {
+                    bot.notifyAll('есть свободное время').then(() => {
                         vacantNotify = false;
                     });
                 }
             }
             else if (!vacantNotify) {                
-                bot.notifyAll('no vacant time').then(() => {
+                bot.notifyAll('нет свободного времени').then(() => {
                     vacantNotify = true;
                 });
             }

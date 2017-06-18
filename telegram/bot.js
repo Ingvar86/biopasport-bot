@@ -1,6 +1,7 @@
 'use strict';
 var TelegramBot = require('node-telegram-bot-api');
 var chatSetvice = require('../services/chatService');
+var dep = require('../dep.json');
 
 // replace the value below with the Telegram token you receive from @BotFather
 const token = process.env.BOT_TOKEN;
@@ -47,6 +48,40 @@ bot.onText(/\/ping/, function (msg, match) {
     var chatId = msg.chat.id;
   // send back the matched "whatever" to the chat
     bot.sendMessage(chatId, 'pong');
+});
+
+bot.onText(/\/key/, function (msg, match) {
+  // 'msg' is the received Message from Telegram
+  // 'match' is the result of executing the regexp above on the text content
+  // of the message
+
+    var chatId = msg.chat.id;
+  // send back the matched "whatever" to the chat
+    let keyboard = [];
+    dep[0].deps.forEach(function(element) {
+        keyboard.push([{text: element.name}]);
+    });
+    bot.sendMessage(chatId, 'м. Дніпро', {
+        reply_markup: {
+            keyboard: keyboard,
+            one_time_keyboard: true
+        }
+    });
+});
+
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text;
+
+  let findDep = dep[0].deps.find((elem) => {
+    return elem.name === text;
+  });
+  if (findDep) {
+    chatSetvice.saveChat(chatId, findDep.id);
+  }
+
+  // send a message to the chat acknowledging receipt of their message
+  //bot.sendMessage(chatId, 'Received your message');
 });
 
 // Listen for any kind of message. There are different kinds of

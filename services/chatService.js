@@ -6,9 +6,13 @@ function getChats() {
     });
 }
 
-function saveChat(chatId) {
+function saveChat(chatId, depId) {
+    let updateCommand = {$set: {chatId: chatId}};
+    if (depId) {
+        updateCommand.$addToSet = {deps: depId}
+    }
     return connect.getConnection().then((db) => {
-        return db.collection('chats').findOneAndUpdate({chatId: chatId}, {$set: {chatId: chatId}}, {upsert: true});
+        return db.collection('chats').findOneAndUpdate({chatId: chatId}, updateCommand, {upsert: true});
     });
 }
 
